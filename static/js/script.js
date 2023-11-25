@@ -104,7 +104,7 @@ async function getInfo() {
   videoThumbnailElem.src = videoInfo.video.thumbnail
   videoDuration.innerText = formatTime(videoInfo.video.duration)
   videoViews.innerText = videoInfo.video.viewCount.toLocaleString()
-  videoLikes.innerText = videoInfo.video.likeCount.toLocaleString()
+  videoLikes.innerText = videoInfo.video.likeCount.toLocaleString() ?? 'Disabled'
 
   downloadButton.innerHTML = `<i class="fa-solid fa-download"></i> DOWNLOAD IN ${checkbox.id.toUpperCase()}`
   return
