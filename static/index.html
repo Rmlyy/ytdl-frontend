@@ -1,0 +1,87 @@
+<!--
+  Favicon by https://icons8.com
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="/img/icon.png" />
+    <meta property="og:title" content="YouTube Downloader" />
+    <meta
+      property="og:description"
+      content="Download your favorite YouTube videos in MP4 or MP3 up to 8k60 FPS."
+    />
+    <meta property="og:url" content="https://ytdl.rmly.dev" />
+    <title>YouTube Downloader</title>
+  </head>
+  <body>
+    <div class="content">
+      <noscript>
+        <div class="nojs">
+          <p>
+            JavaScript is disabled in your browser. Please enable JavaScript in order to use
+            this website.
+          </p>
+        </div>
+      </noscript>
+      <div class="heading">
+        <h1>
+          <i class="fa-brands fa-youtube" style="color: red"></i>
+          <span style="color: red">YouTube</span> Downloader
+        </h1>
+
+        <h4>Download your favorite YouTube videos in MP4 or MP3.</h4>
+      </div>
+
+      <div id="app" class="app" style="margin-top: 2.5vw">
+        <p>Video URL:</p>
+        <input type="url" id="url" placeholder="https://youtu.be/dQw4w9WgXcQ" />
+
+        <p style="margin-top: 15px">Video format:</p>
+        <label>MP3</label>
+        <input type="checkbox" id="mp3" name="format" onclick="toggleCheckboxes(this)" />
+        <label>MP4</label>
+        <input type="checkbox" id="mp4" name="format" onclick="toggleCheckboxes(this)" />
+
+        <button id="dlbtn" onclick="getInfo()">
+          <i class="fa-solid fa-download"></i> DOWNLOAD
+        </button>
+      </div>
+
+      <div id="video" class="video" style="display: none">
+        <h2>Video Info</h2>
+        <img id="thumbnail" alt="Thumbnail" />
+        <p><b>TITLE:</b> <span id="title"></span></p>
+        <p><b>DURATION:</b> <span id="duration"></span></p>
+        <p><b>VIEWS:</b> <span id="views"></span></p>
+        <p><b>Likes:</b> <span id="likes"></span></p>
+        <div id="format" style="display: none">
+          <label>Video Format:</label>
+          <select id="formats"></select>
+        </div>
+
+        <button id="dlbtn2" onclick="download()">
+          <i class="fa-solid fa-download"></i>
+        </button>
+
+        <p id="info" style="margin-top: 10px; display: block"></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>
+        <i class="fa-solid fa-code"></i> Made by
+        <a target="_blank" href="//rmly.dev">rmly.dev</a>
+      </p>
+      <p>
+        <i class="fa-solid fa-hand-holding-dollar"></i> Like this website?
+        <a target="_blank" href="//donate.rmly.dev">Consider donating</a>
+      </p>
+    </div>
+    <script src="https://kit.fontawesome.com/020fffa6ef.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
